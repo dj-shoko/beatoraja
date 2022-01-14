@@ -9,6 +9,17 @@ import static bms.player.beatoraja.play.GrooveGauge.GaugeType.*;
  */
 public enum GaugeProperty {
 
+    IIDX(new GaugeElementProperty[]{
+        GaugeElementProperty.ASSIST_EASY,
+            GaugeElementProperty.EASY,
+            GaugeElementProperty.NORMAL,
+            GaugeElementProperty.HARD,
+            GaugeElementProperty.EXHARD,
+            GaugeElementProperty.HAZARD,
+            GaugeElementProperty.CLASS,
+            GaugeElementProperty.EXCLASS,
+            GaugeElementProperty.EXHARDCLASS,
+    }),
     FIVEKEYS(new GaugeElementProperty[]{
             GaugeElementProperty.ASSIST_EASY_5,
                 GaugeElementProperty.EASY_5,
@@ -79,6 +90,16 @@ public enum GaugeProperty {
      */
     public enum GaugeElementProperty {
 
+        ASSIST_EASY_IIDX(TOTAL ,2 ,100 ,22, 60, new float[]{1.0f, 1.0f, 0.5f, -1.6f, -4.8f, -1.6f}, new float[][]{}),
+        EASY_IIDX(TOTAL ,2 ,100 ,22, 80, new float[]{1.0f, 1.0f, 0.5f, -1.6f, -4.8f, -1.6f}, new float[][]{}),
+        NORMAL_IIDX(TOTAL ,2 ,100 ,22, 80, new float[]{1.0f, 1.0f, 0.5f, -2.0f, -6.0f, -2.0f}, new float[][]{}),
+        HARD_IIDX(MODIFY_DAMAGE ,0 ,100 ,100, 2, new float[]{0.16f, 0.16f, 0f, -5.0f, -9.0f, -5.0f}, new float[][]{{30, 0.5f}}),
+        EXHARD_IIDX(MODIFY_DAMAGE ,0 ,100 ,100, 2, new float[]{0.16f, 0.16f, 0f, -10.0f, -18.0f, -10.0f}, new float[][]{}),
+        HAZARD_IIDX(null ,0 ,100 ,100, 2, new float[]{0f, 0f, 0f, -100.0f, -100.0f, -100.0f}, new float[][]{}),
+        CLASS_IIDX(null ,0 ,100 ,100, 2, new float[]{0.16f, 0.16f, 0.04f, -1.5f, -2.5f, -1.5f}, new float[][]{{30, 0.5f}}),
+        EXCLASS_IIDX(null ,0 ,100 ,100, 2, new float[]{0.16f, 0.16f, 0.04f, -3.0f, -5.0f, -3.0f}, new float[][]{}),
+        EXHARDCLASS_IIDX(null ,0 ,100 ,100, 2, new float[]{0.01f, 0.01f, 0f, -2.5f, -5.0f, -2.5f}, new float[][]{}),
+        
         ASSIST_EASY_5(TOTAL ,2 ,100 ,20, 50, new float[]{1.0f, 1.0f, 0.5f, -1.5f, -3.0f, -0.5f}, new float[][]{}),
         EASY_5(TOTAL ,2 ,100 ,20, 75, new float[]{1.0f, 1.0f, 0.5f, -1.5f, -4.5f, -1.0f}, new float[][]{}),
         NORMAL_5(TOTAL ,2 ,100 ,20, 75, new float[]{1.0f, 1.0f, 0.5f, -3.0f, -6.0f, -2.0f}, new float[][]{}),
