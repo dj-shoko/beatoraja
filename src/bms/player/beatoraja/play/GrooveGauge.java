@@ -260,7 +260,7 @@ public class GrooveGauge {
 			@Override
 			public float modify(float f, BMSModel model) {
 				if(f > 0) {
-					return (float) (f * model.getTotal() / model.getTotalNotes());
+					return (float) (f * model.getTotalNotes());
 				}
 				return f;
 			}
