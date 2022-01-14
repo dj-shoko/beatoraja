@@ -4,9 +4,27 @@ package bms.player.beatoraja.play;
  * 判定の設定値
  *
  * @author exch
+ *
+ *https://iidx.org/misc/iidx_lr2_beatoraja_diff
+ *		
+ *IIDX (most charts)
+ *
+ *PGreat	GReat	Good	Bad	Poor
+ *±16.67	±33.33	±116.67	±250	?
+ *
  */
 public enum JudgeProperty {
 
+	
+    IIDX(new int[][]{ {-16, 16}, {-33, 33}, {-117, 117}, {-250, 250}, {-150, 500} },
+            new int[][]{ {-16, 16}, {-33, 33}, {-117, 117}, {-250, 250}, {-160, 500}},
+	    new int[][]{ {-120, 120}, {-150, 150}, {-200, 200}, {-250, 250}},
+            new int[][]{ {-130, 130}, {-160, 160}, {-110, 110}, {-260, 260}},
+            new boolean[]{true, true, true, false, false, false },
+            MissCondition.ALWAYS,
+            new boolean[]{true, true, true, true, true, false },
+            JudgeWindowRule.IIDX
+            ),
     FIVEKEYS(new int[][]{ {-20, 20}, {-50, 50}, {-100, 100}, {-150, 150}, {-150, 500} },
             new int[][]{ {-30, 30}, {-60, 60}, {-110, 110}, {-160, 160}, {-160, 500}},
             new int[][]{ {-120, 120}, {-150, 150}, {-200, 200}, {-250, 250}},
@@ -108,6 +126,14 @@ public enum JudgeProperty {
     }
     
     public enum JudgeWindowRule {
+    	IIDX (new int[]{100, 100, 100, 100, 100}){
+
+			@Override
+			public int[][] create(int[][] org, int judgerank, int[] judgeWindowRate) {
+				return JudgeWindowRule.create(org, judgerank,judgeWindowRate, false);
+			}
+    		
+    	},
     	NORMAL (new int[]{25, 50, 75, 100, 125}){
 
 			@Override
