@@ -86,6 +86,17 @@ public enum GaugeProperty {
     /**
      * 各ゲージの仕様
      * 
+     *https://iidx.org/misc/iidx_lr2_beatoraja_diff
+     *
+     *          PG	    GREAT	GOOD	BAD	    POOR	空P
+     * AEasy    a	    a	    a/2	    -1.6	-4.8	-1.6
+     * Easy     a	    a	    a/2	    -1.6	-4.8	-1.6
+     * Normal   a	    a	    a/2	    -2.0	-6.0	-2.0
+     * Hard     0.16	0.16	0	    -5.0	-9.0	-5.0
+     * EXH      0.16	0.16	0	    -10	    -18	    -10
+     * Dan      0.16	0.16	0.4	    -1.5	-2.5	-1.5
+     * EXDan    0.16	0.16	0.4	    -3.0	-5.0	-3.0
+     *
      * @author exch
      */
     public enum GaugeElementProperty {
