@@ -2,6 +2,9 @@
 Codename beatoraja is a Cross-platform rhythm game based on Java and libGDX.
 It works on Windows, Mac OS, and Linux.
 
+# Fork
+-Uses timing window and gauges identical to beatmania IIDX's
+
 # Features
 - 3 types of Long Note mode : Long Notes, Charge Notes, Hell Charge Notes, and Back Spin Scratch like iidx
 - show note timing duration (like iidx green number), judge details (fast/slow or +-ms)
